@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewData["Title"] = "Movie Form";
+}
+
+
+<h1>Movie Registration Form</h1>
+
+<h4>To add a new movie, please fill out the following form:</h4>
+
+
+<form asp-controller="MovieRegistration" asp-action="MovieRegistered" method="post">
+    Title:<br />
+    <input type="text" name="Title" value="" required maxlength="50"/><br />
+    Genre:<br />
+    <select id="Genre" name="Genre">
+        <option value="Action">Action</option>
+        <option value="Adventure">Adventure</option>
+        <option value="Comedy">Comedy</option>
+        <option value="Drama">Drama</option>
+        <option value="Fantasy">Fantasy</option>
+        <option value="Historical">Historical</option>
+        <option value="Horror">Horror</option>
+        <option value="Mystery">Mystery</option>
+        <option value="Romance">Romance</option>
+        <option value="ScienceFiction">Science Fiction</option>
+    </select><br />
+    Year Released:<br />
+    <input type="number" name="Year" min="1880" max="2020" /><br />
+    Actors:<br />
+    <input type="text" name="Actors" value="" /><br />
+    Directors:<br />
+    <input type="text" name="Directors" /><br />
+    <input type="submit" value="Let's gooo" />
+</form>
